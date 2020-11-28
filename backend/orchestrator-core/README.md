@@ -1,0 +1,3 @@
+# Orquestradores Nucleares
+
+Essa camada é responsável por conter de forma separada e isolada as regras de negócios. Os orquestradores nucleares podem acessar os orquestradores elementais para recuperar informações do banco de dados e tem permissão de acesso a outros orquestradores nucleares, para que assim possam realizar suas regras de negócios. Eles deverão retornar a informação via REST ou GRPC. 
