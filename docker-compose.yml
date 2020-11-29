@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  orch-elementary-user-database:
+    container_name: orch-elementary-user-database
+    image: postgres:13.1-alpine
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: orch-elementary-user-admin
+      POSTGRES_USER: orch-elementary-user-admin
+      POSTGRES_DB: user-database
+    ports:
+    - 5433:5432
+    volumes:
+    - orch-elementary-user-database
+
+volumes:
+  orch-elementary-user-database:
+    driver: local
